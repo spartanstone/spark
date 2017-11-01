@@ -12,7 +12,5 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::resource('sparkUsers', 'SparkUserController');
 
-Route::middleware('auth:api')->get('/hello', function (Request $request) {
-    return $request->user();
-});
