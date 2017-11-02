@@ -14,3 +14,5 @@ use Illuminate\Http\Request;
 */
 Route::resource('sparkUsers', 'SparkUserController');
 
+Route::post('group','groupCreateController@setPropData');
+
