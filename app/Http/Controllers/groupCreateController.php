@@ -22,20 +22,20 @@ class groupCreateController extends Controller
 
             $group_1 = new groupCreate;
             $group_1->groupName = $groupName;
-            $group_1->name = 'i';
+            $group_1->name = 'sharedRoster.displayName';
             $group_1->propValue = $groupName;
             $group_1->save();
 
             $group_2 = new groupCreate;
             $group_2->groupName = $groupName;
-            $group_2->name = 'b';
+            $group_2->name = 'sharedRoster.grouplist';
             $group_2->propValue = ' ';
             $group_2->save();
 
 
             $group_3 = new groupCreate;
             $group_3->groupName = $groupName;
-            $group_3->name = 'c';
+            $group_3->name = 'sharedRoster.showInRoster';
             $group_3->propValue = 'Everyone';
             $group_3->save();
 
