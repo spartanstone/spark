@@ -12,7 +12,21 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+//userstuff
+
 Route::resource('sparkUsers', 'SparkUserController');
+Route::post('userdelete/{username}','SparkUserController@deleteUser');
+Route::post('userupdate/{username}','SparkUserController@updateUser');
+Route::post('groupupdate/{username}','SparkUserController@updateGroup');
+
+
+
+
+//group stuff
+
 
 Route::post('group','groupCreateController@setPropData');
+Route::post('removegroup/{removegroup}','groupCreateController@removeGroup');
+
 

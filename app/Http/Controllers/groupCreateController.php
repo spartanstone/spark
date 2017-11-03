@@ -52,4 +52,9 @@ class groupCreateController extends Controller
 
 
     }
+
+    public function removeGroup($removegroup){
+        groupCreate::where('groupName', $removegroup)->delete();
+
+    }
 }

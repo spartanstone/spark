@@ -11,16 +11,7 @@ use Log;
 class SparkUserController extends Controller
 {
 
-  /*public function addUser(){
-    $username=null;
-    $name=null;
-    $plainPassword=null;
-    $email=null;
-    $groupName=null;
 
-
-
-  }*/
 
         private function setFields($sparkUsers)
         {
@@ -42,16 +33,6 @@ class SparkUserController extends Controller
 
               return $sparkUsers;
         }
-
-     /*   private function setGroup($setGroup){
-
-                if(Input::has('groupName') ){
-                    $setGroup->groupName = Input::get('groupName');
-                }
-
-                return$setGroup;
-
-        }*/
 
     public function store(Request $request)
     {
@@ -82,6 +63,57 @@ class SparkUserController extends Controller
       }
       
     }
+
+    public function deleteUser($username){
+
+      SparkUser::where('username', $username)->delete();
+      setGroup::where('username', $username)->delete();
+
+
+
+    }
+    public function updateUser($username){
+      $name=null;
+      $email=null;
+      $lastname=null;
+
+      $name=Input::get('name');
+      $emai=Input::get('email');
+      $lastname=Input::get('lastname');
+
+
+
+
+
+/*
+      $userUpdate= new SparkUser;
+      $userUpdate->name = $namess      $userUpdate->email = $email;
+      $userUpdate->plainPassword = $lastname;
+      $userUpdate->save();
+
+*/
+
+    }
+
+    public function updateGroup($username){
+      $groupName = null;
+
+      $groupName=Input::get('groupName');
+
+
+      $groupUpdate = new setGroup;
+      $groupUpdate->groupName = $groupName;
+      $groupUpdate->save();
+
+
+    }
+
+
+
+
+
+
+
 
     
 }
