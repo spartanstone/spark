@@ -36,7 +36,7 @@ class groupCreateController extends Controller
             $group_3 = new groupCreate;
             $group_3->groupName = $groupName;
             $group_3->name = 'sharedRoster.showInRoster';
-            $group_3->propValue = 'Everyone';
+            $group_3->propValue = 'everybody';
             $group_3->save();
 
 
